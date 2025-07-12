@@ -104,9 +104,10 @@ section {
   font-size: 10px;
 
   --main-c1: #5c7a91;
-  --main-c2: #83bffa;
-  --main-c3: #d1e4f3;
-  --main-c4: #f5f9fd;
+  --main-c2: #527bf5;
+  --main-c3: #83bffa;
+  --main-c4: #d1e4f3;
+  --main-c5: #f5f9fd;
 }
 body {
   position: relative;
@@ -139,5 +140,10 @@ button {
   border-radius: 5px;
   background-color: #ffffff;
 }
+input {
+  outline: none;
+}
 
-/* box-shadow: 0 8px 32px rgba(59, 130, 246, 0.08); */
+.highlight {
+  background-color: var(--main-c2) !important;
+}
