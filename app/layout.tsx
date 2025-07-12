@@ -1,7 +1,8 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Viewport } from 'next';
-import Head from 'next/head';
+import Script from 'next/script';
+import NavBar from 'components/navigation/navBar';
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -204,6 +205,8 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
+const ncpKeyId = process.env.NAVER_CLIENT_ID;
+
 export default function RootLayout({
   children,
 }: {
@@ -215,17 +218,28 @@ export default function RootLayout({
       className="overscroll-contain scroll-smooth"
       suppressHydrationWarning
     >
-      <Head>
+      <head>
         <meta
           name="apple-mobile-web-app-capable"
           content="yes"
         />
-      </Head>
+        <Script
+          type="text/javascript"
+          src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${ncpKeyId}`}
+          strategy="beforeInteractive"
+        />
+        <Script
+          type="text/javascript"
+          src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${ncpKeyId}&submodules=geocoder`}
+          strategy="beforeInteractive"
+        />
+      </head>
       <body
         className={`h-full max-w-full relative antialiased ${inter.variable}`}
       >
         <div className="bg-white w-full min-h-full max-w-[500px] mx-auto relative">
           {children}
+          <NavBar />
         </div>
       </body>
     </html>
