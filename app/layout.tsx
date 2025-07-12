@@ -3,8 +3,8 @@ import './globals.css';
 import { Viewport } from 'next';
 import Script from 'next/script';
 
-const defaultUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
+const defaultUrl = process.env.SHOW_URL
+  ? `https://${process.env.SHOW_URL}`
   : 'http://localhost:3000';
 
 const inter = Inter({
