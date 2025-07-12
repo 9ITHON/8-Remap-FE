@@ -18,7 +18,18 @@
   justify-content: center;
   width: 5.6rem;
   height: 5.6rem;
-  background-color: var(--main-c2);
-  box-shadow: 0 0px 12px rgba(59, 130, 246, 0.2);
   border-radius: 50%;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.out {
+  background-color: var(--main-c2); /* #527bf5*/
+  box-shadow: 0 0px 12px rgba(59, 130, 246, 0.2);
+}
+
+.in {
+  background-color: #83bffa; /* #83bffa */
+  /* inner shadow */
+  box-shadow: inset 0 0px 12px rgba(59, 130, 246, 0.8);
 }
