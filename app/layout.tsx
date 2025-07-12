@@ -217,7 +217,13 @@ export default function RootLayout({
       className="overscroll-contain scroll-smooth"
       suppressHydrationWarning
     >
-      <body className={`antialiased ${inter.variable}`}>{children}</body>
+      <body
+        className={`h-full max-w-full relative antialiased ${inter.variable}`}
+      >
+        <div className="bg-white w-full min-h-full max-w-[500px] mx-auto relative">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
