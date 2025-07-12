@@ -1,7 +1,7 @@
 .container {
   display: flex;
-  padding: 1.6rem;
+  padding: 1.4rem;
   background-color: white;
-  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.08);
-  border-radius: 1.5rem;
+  box-shadow: 0 8px 12px rgba(59, 130, 246, 0.08);
+  border-radius: 1.2rem;
 }

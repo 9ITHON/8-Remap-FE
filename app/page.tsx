@@ -9,10 +9,20 @@ export default function Home() {
       <MapContainer
         coordinates={{ x: 37.3595316, y: 127.1052133 }}
       ></MapContainer>
-      <div className="absolute top-0 left-0 w-full flex flex-col justify-between p-[2.4rem]">
-        <Container className="">
-          <SVG SVGcomponent={Search} />
-          <input type="text" />
+      <div className="absolute top-0 left-0 w-full flex gap-[1rem] justify-between py-[2.4rem] px-[1.8rem]">
+        <Container>
+          <input
+            type="text"
+            className="w-full text-[1.8rem] px-[1rem]"
+          />
+        </Container>
+        <Container className="highlight">
+          <SVG
+            SVGcomponent={Search}
+            bg="#fff"
+            width={24}
+            height={24}
+          />
         </Container>
       </div>
     </div>

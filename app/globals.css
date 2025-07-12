@@ -104,9 +104,10 @@ section {
   font-size: 10px;
 
   --main-c1: #5c7a91;
-  --main-c2: #83bffa;
-  --main-c3: #d1e4f3;
-  --main-c4: #f5f9fd;
+  --main-c2: #527bf5;
+  --main-c3: #83bffa;
+  --main-c4: #d1e4f3;
+  --main-c5: #f5f9fd;
 }
 body {
   position: relative;
@@ -141,4 +142,8 @@ button {
 }
 input {
   outline: none;
+}
+
+.highlight {
+  background-color: var(--main-c2) !important;
 }
