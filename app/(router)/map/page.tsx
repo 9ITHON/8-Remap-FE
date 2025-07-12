@@ -10,11 +10,7 @@ export default function Home() {
         coordinates={{ x: 37.3595316, y: 127.1052133 }}
       ></MapContainer>
       <div className="absolute top-0 left-0 w-full flex gap-[1rem] justify-between py-[2.4rem] px-[1.8rem]">
-<<<<<<< HEAD:app/page.tsx
         <Container className="w=full">
-=======
-        <Container className="w-full">
->>>>>>> origin/dev:app/(router)/map/page.tsx
           <input
             type="text"
             className="w-full text-[1.8rem] px-[1rem]"

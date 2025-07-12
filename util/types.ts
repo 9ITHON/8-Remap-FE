@@ -5,3 +5,10 @@ export interface userData {
   password: string;
   birthday: string;
 }
+
+export interface fieldData {
+  id: number;
+  place: string;
+  title: string;
+  coverImgUrl: string;
+}
