@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 3rem;
+  background-color: rgb(249, 249, 251);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.6rem;
+  height: 60px;
+  color: rgb(44, 107, 238);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.backbutton {
+  font-size: 2rem;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  padding: 20rem 0;
+  font-size: 5rem;
+  font-weight: bold;
+  color: rgb(44, 107, 238);
+}
+
+.container input {
+  flex: 1;
+  padding: 1.5rem;
+  border-bottom: 0.1rem solid rgb(44, 107, 238);
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.container input:focus {
+  border: 1px solid rgb(44, 107, 238);
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: rgb(140, 138, 138);
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+.container button {
+  margin-top: 3rem;
+  padding: 15px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.activeButton {
+  background-color: rgb(44, 107, 238);
+}
+
+.inactiveButton {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
