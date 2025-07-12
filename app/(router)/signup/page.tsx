@@ -29,16 +29,22 @@ export default function Page() {
     }
   }, [state]);
 
+  function goBack() {
+    window.history.back();
+  }
+
   return (
     <div className={style.container}>
       <div className={style.header}>
-        <Link
-          className={style.backbutton}
-          href={`/`}
+        <button
+          className={style.backBtn}
+          onClick={goBack}
         >
-          ◀
-        </Link>
-        <div className={style.title}>RE:MAP</div>
+          <svg viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+          </svg>
+        </button>
+        <h1 className={style.headerTitle}>RE:MAP</h1>
       </div>
 
       <form
@@ -69,14 +75,7 @@ export default function Page() {
           onChange={e => setPassword(e.target.value)}
           disabled={isPending}
         />
-        <input
-          type="tel"
-          name="phone"
-          placeholder="전화번호"
-          value={telephone}
-          onChange={e => setTelephone(e.target.value)}
-          disabled={isPending}
-        />
+
         <input
           type="date"
           name="birthdate"
