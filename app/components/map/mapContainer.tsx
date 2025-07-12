@@ -1,27 +1,12 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
+import { exampleMemory } from './schema';
 
 export default function MapContainer() {
-  // const initMap = (placename: string) => {
-  //   const marker = new naver.maps.Marker({
-  //     position: new naver.maps.LatLng(x, y),
-  //     map: map,
-  //     icon: {
-  //       content: [
-  //         '<img src="https://map.pstatic.net/resource/api/v2/image/maps/selected-marker/default@1x.png?version=16" alt="마커 이미지" ' +
-  //           'style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; max-width: none; max-height: none; ' +
-  //           '-webkit-user-select: none; width: 46px; height: 59px; left: 0px; top: 0px;"></img>',
-  //         '<div class="relative ml-[50%]">',
-  //         '<div class="flex flex-col items-center -translate-x-1/2 absolute text-[12px] text-shadow max-w-[120px] min-w-[70px] break-words break-keep text-center">',
-  //         `<div class="absolute text-shadow rounded-[15px]">${placename}</div>`,
-  //         '</div>',
-  //         '</div>',
-  //       ].join(''),
-  //       size: new naver.maps.Size(46, 59),
-  //       anchor: new naver.maps.Point(23, 59),
-  //     },
-  //   });
-  // };
+  const [title, setTitle] = useState('');
+  const [userName, setUserName] = useState('');
+  const [createdAt, setCreatedAt] = useState('');
 
   useEffect(() => {
     const checkAndInit = () => {
@@ -67,6 +52,38 @@ export default function MapContainer() {
         }
       };
       initGeolocation();
+
+      exampleMemory.map(
+        ({ id, title, userName, coordinates, createdAt, isPublic }) => {
+          const marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(coordinates.x, coordinates.y),
+            map: map,
+            title: `${title} by ${userName}`,
+            icon: {
+              content: [
+                '<img src="/images/marker.png" alt="marker" ' +
+                  'style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; max-width: none; max-height: none; ' +
+                  '-webkit-user-select: none; width: 33px; height: 59px; left: 0px; top: 0px;"></img>',
+                '<div class="relative ml-[50%]">',
+                '<div class="flex flex-col items-center -translate-x-1/2 absolute text-[12px] text-shadow max-w-[120px] min-w-[70px] break-words break-keep text-center">',
+                `<div class="absolute text-shadow rounded-[15px]">${title}</div>`,
+                '</div>',
+                '</div>',
+              ].join(''),
+              size: new naver.maps.Size(33, 59),
+              anchor: new naver.maps.Point(17, 59),
+            },
+          });
+
+          if (isPublic) {
+            console.log(`Public memory added: ${title}`);
+          }
+
+          naver.maps.Event.addListener(marker, 'click', () => {
+            console.log(`Marker clicked: ${id} - ${title}`);
+          });
+        }
+      );
 
       naver.maps.Event.once(map, 'init', () => {
         const html = `
