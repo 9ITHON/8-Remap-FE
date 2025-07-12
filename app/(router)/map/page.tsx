@@ -20,7 +20,7 @@ export default function Home() {
     <div>
       <MapContainer address={address} /> {/* 전달! */}
       <div className="absolute top-0 left-0 w-full flex gap-[1rem] justify-between py-[2.4rem] px-[1.8rem]">
-        <Container className="w=full">
+        <Container className="w-full">
           <input
             type="text"
             className="w-full text-[1.8rem] px-[1rem]"
