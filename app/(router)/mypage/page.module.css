@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background-color: rgb(249, 249, 251);
+}
+
+.container hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+}
+
+.nickname {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  font-size: 1.5rem;
+}
+
+.email {
+  font-size: 0.875rem;
+
+  font-size: 1.5rem;
+}
+
+/* 메뉴 리스트 */
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  font-size: 1.5rem;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+
+  color: #333;
+  text-decoration: none;
+}
+
+.menuItem:hover {
+  background-color: #f9f9f9;
+}
