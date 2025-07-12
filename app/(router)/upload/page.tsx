@@ -85,12 +85,6 @@ export default function UploadPage() {
           onChange={e => setLongitude(e.target.value)}
           className={styles.inputSmall}
         />
-        <button
-          onClick={handleCurrentLocation}
-          className={styles.locationButton}
-        >
-          현재 위치
-        </button>
       </div>
 
       <div className={styles.themeSection}>
