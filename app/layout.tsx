@@ -2,7 +2,6 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { Viewport } from 'next';
 import Script from 'next/script';
-import NavBar from 'components/navigation/navBar';
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -239,7 +238,6 @@ export default function RootLayout({
       >
         <div className="bg-white w-full min-h-full max-w-[500px] mx-auto relative">
           {children}
-          <NavBar />
         </div>
       </body>
     </html>
