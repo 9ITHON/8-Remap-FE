@@ -1,9 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
-// import { cn } from '@/lib/utils';
-// import { Toaster } from '@/components/ui/toaster';
-// import { ThemeProvider } from '@/components/ThemeProvider';
 import { Viewport } from 'next';
+import Head from 'next/head';
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -217,6 +215,12 @@ export default function RootLayout({
       className="overscroll-contain scroll-smooth"
       suppressHydrationWarning
     >
+      <Head>
+        <meta
+          name="apple-mobile-web-app-capable"
+          content="yes"
+        />
+      </Head>
       <body
         className={`h-full max-w-full relative antialiased ${inter.variable}`}
       >
