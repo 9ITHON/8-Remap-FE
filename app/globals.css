@@ -147,3 +147,16 @@ input {
 .highlight {
   background-color: var(--main-c2) !important;
 }
+
+.box-shadow {
+  box-shadow: 0 0px 12px rgba(59, 130, 246, 0.2);
+}
+
+.text-shadow {
+  text-shadow:
+    rgb(255, 255, 255) -1px 0px,
+    rgb(255, 255, 255) 0px 1px,
+    rgb(255, 255, 255) 1px 0px,
+    rgb(255, 255, 255) 0px -1px;
+  backdrop-filter: blur(1px);
+}
