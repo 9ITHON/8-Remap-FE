@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 3rem;
+  background-color: rgb(249, 249, 251);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.6rem;
+  height: 60px;
+  color: rgb(44, 107, 238);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 30rem;
+}
+
+.backbutton {
+  font-size: 2rem;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.container input {
+  flex: 1;
+  padding: 1.5rem;
+  border-bottom: 0.1rem solid rgb(44, 107, 238);
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.container input:focus {
+  border: 1px solid rgb(44, 107, 238);
+}
+
+.container button {
+  margin-top: 3rem;
+  padding: 15px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.activeButton {
+  background-color: rgb(44, 107, 238); /* 파란색 */
+}
+
+.inactiveButton {
+  background-color: #cccccc; /* 회색 */
+  color: #666666;
+  cursor: not-allowed;
+}
