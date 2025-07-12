@@ -1,4 +1,4 @@
-# 4-CLP-FE (Next.js App Router 기반 프론트엔드)
+# 8-RE:MAP-FE (Next.js App Router 기반 프론트엔드)
 
 ---
 
