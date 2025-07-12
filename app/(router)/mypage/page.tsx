@@ -1,5 +1,4 @@
 'use client';
-import { userData } from '@/util/types';
 import Link from 'next/link';
 import style from './page.module.css';
 import Image from 'next/image';
