@@ -4,8 +4,11 @@ import Link from 'next/link';
 import style from './page.module.css';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
-export default function Page({ id, nickname, email }: userData) {
+export default function Page() {
+  const [nickname, setNickname] = useState('홍길동');
+  const [email, setEmail] = useState('example@gmail.com');
   const router = useRouter();
 
   const handleLogout = (e: React.MouseEvent<HTMLAnchorElement>) => {
