@@ -67,6 +67,10 @@ export default function Page() {
     }
   };
 
+  function goBack() {
+    window.history.back();
+  }
+
   return (
     <div className={style.container}>
       <div className={style.header}>
@@ -74,12 +78,14 @@ export default function Page() {
           href="/"
           className={style.backbutton}
         >
-          ◀
-        </Link>
-        <div className={style.title}>RE:MAP</div>
+          <svg viewBox="0 0 24 24">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+          </svg>
+        </button>
+        <h1 className={style.headerTitle}>RE:MAP</h1>
       </div>
 
-      <form
+     <form
         onSubmit={handleSubmit}
         className={style.form}
       >
